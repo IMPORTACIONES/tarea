@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejecutar Bucle</title>
+  <script>
+    function ejecutarbucle() {
+      var numero = parseInt(document.getElementById("numero").value);
+      var divResultado = document.getElementById("resultado");
+      divResultado.innerHTML = ""; 
+
+      for (var i = 1; i <= numero; i++) {
+        var linea = document.createElement("p"); 
+         linea.textContent = "Orden " + i; 
+        
+        divResultado.appendChild(linea);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Ejercicio 1</h1>
+  <label for="numero">Ingresa un número:</label>
+  <input type="number" id="numero">
+  <button onclick="ejecutarbucle()">Mostrar</button>
+  <div id="resultado"></div>
+</body>
+</html>
